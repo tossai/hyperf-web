@@ -26,13 +26,13 @@ return [
             // 这个消费者要从哪个服务中心获取节点信息，如不配置则不会从服务中心获取节点信息
             'registry' => [
                 'protocol' => 'consul',
-                'address' => 'http://172.17.0.4:8500',
+                'address' => 'http://172.20.0.2:8500',
             ],
             // 如果没有指定上面的 registry 配置，即为直接对指定的节点进行消费，通过下面的 nodes 参数来配置服务提供者的节点信息
             'nodes' => [
                 // Provide the host and port of the service provider.
                 // ['host' => 'The host of the service provider', 'port' => 9502]
-                ['host' => '172.17.0.6', 'port' => 9503]
+                ['host' => '172.20.0.3', 'port' => 9503]
             ],
             // 配置项，会影响到 Packer 和 Transporter
             'options' => [
